@@ -6,8 +6,10 @@ RUN yum install -y wget
 WORKDIR /home/
 
 RUN source /cvmfs/cms.cern.ch/cmsset_default.sh && \
-    wget https://raw.githubusercontent.com/fastmachinelearning/sonic-workflows/CMSSW_14_1_X/setup.sh \
-    && source setup.sh
+    wget https://raw.githubusercontent.com/fastmachinelearning/sonic-workflows/CMSSW_14_1_X/setup.sh
+
+RUN ls -l
+RUN source setup.sh
 
 RUN cd CMSSW_14_1_0_pre7/src/sonic-workflows \
     && cmsenv
