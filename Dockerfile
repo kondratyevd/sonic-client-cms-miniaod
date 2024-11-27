@@ -1,7 +1,11 @@
 ARG ROOT_CONTAINER=gitlab-registry.cern.ch/linuxsupport/alma8-base:latest
 FROM $ROOT_CONTAINER
 
-RUN yum install -y wget bash perl git which python3
+# Set SCRAM architecture
+ENV SCRAM_ARCH=el8_amd64_gcc12
+
+# Install dependencies
+RUN yum install -y wget bash perl git which python3 glibc-static glibc-devel libxcrypt-compat
 
 WORKDIR /home/
 
