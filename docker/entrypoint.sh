@@ -8,4 +8,7 @@ source /cvmfs/cms.cern.ch/cmsset_default.sh
 cmsenv
 export CMS_PATH=/etc/
 
+env | grep PATH
+env | grep cvmfs
+
 cmsRun run.py "$@"
