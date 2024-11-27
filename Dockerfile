@@ -5,8 +5,7 @@ FROM $ROOT_CONTAINER
 ENV SCRAM_ARCH=el8_amd64_gcc12
 
 # Install dependencies
-RUN yum install -y wget bash perl git which python3 glibc-static glibc-devel libxcrypt-compat
-
+RUN yum install -y wget bash perl git which python3 glibc-static glibc-devel
 WORKDIR /home/
 
 RUN source /cvmfs/cms.cern.ch/cmsset_default.sh && \
