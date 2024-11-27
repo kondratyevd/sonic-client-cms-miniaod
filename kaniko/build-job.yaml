@@ -17,11 +17,11 @@ spec:
           # - "--no-push"
         resources:
           requests:
-            memory: "2Gi"
-            cpu: "1"
+            memory: "32Gi"
+            cpu: "8"
           limits:
-            memory: "2Gi"
-            cpu: "1"
+            memory: "32Gi"
+            cpu: "8"
         volumeMounts:
           - name: docker-config
             mountPath: /kaniko/.docker/
