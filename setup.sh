@@ -89,6 +89,10 @@ export SCRAM_ARCH=${SLC_VERSION}_amd64_gcc12
 scram project $CMSSWVER
 cd ${CMSSWVER}/src
 eval `scramv1 runtime -sh`
+
+git config user.email "temporary@example.com"
+git config user.name "Temporary User"
+
 git cms-init $ACCESS_CMSSW $BATCH
 git cms-merge-topic -u fastmachinelearning:cmsTritonUpdates2
 git clone ${ACCESS_GITHUB}fastmachinelearning/sonic-workflows -b CMSSW_14_1_X
