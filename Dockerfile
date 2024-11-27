@@ -1,7 +1,7 @@
 ARG ROOT_CONTAINER=gitlab-registry.cern.ch/linuxsupport/alma8-base:latest
 FROM $ROOT_CONTAINER
 
-RUN yum install -y wget bash
+RUN yum install -y wget bash perl
 
 WORKDIR /home/
 
