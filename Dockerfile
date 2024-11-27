@@ -3,7 +3,7 @@ FROM $ROOT_CONTAINER
 
 
 # Install dependencies
-RUN dnf -y install git bash perl
+RUN dnf -y install git bash perl which python3
 
 WORKDIR /home/
 
