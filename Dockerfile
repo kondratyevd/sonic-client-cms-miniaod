@@ -1,15 +1,14 @@
 ARG ROOT_CONTAINER=gitlab-registry.cern.ch/linuxsupport/alma8-base:latest
 FROM $ROOT_CONTAINER
 
-RUN yum install -y wget
+RUN yum install -y wget bash
 
 WORKDIR /home/
 
 RUN source /cvmfs/cms.cern.ch/cmsset_default.sh && \
-    wget https://raw.githubusercontent.com/fastmachinelearning/sonic-workflows/CMSSW_14_1_X/setup.sh
-
-RUN ls -l
-RUN source setup.sh
+    wget https://raw.githubusercontent.com/fastmachinelearning/sonic-workflows/CMSSW_14_1_X/setup.sh && \
+    chmod +x setup.sh &&\
+    ./setup.sh
 
 RUN cd CMSSW_14_1_0_pre7/src/sonic-workflows \
     && cmsenv
