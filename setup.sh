@@ -90,8 +90,8 @@ scram project $CMSSWVER
 cd ${CMSSWVER}/src
 eval `scramv1 runtime -sh`
 
-git config user.email "temporary@example.com"
-git config user.name "Temporary User"
+git config --global user.email "email@example.com"
+git config --global user.name "FirstName LastName"
 
 git cms-init $ACCESS_CMSSW $BATCH
 git cms-merge-topic -u fastmachinelearning:cmsTritonUpdates2
