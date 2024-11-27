@@ -11,6 +11,7 @@ spec:
         image: gcr.io/kaniko-project/executor:latest
         args:
           - "--context=git://github.com/kondratyevd/sonic-client-cms-miniaod.git"
+          - "--context-sub-path=docker/"
           - "--dockerfile=Dockerfile"
           - "--destination=geddes-registry.rcac.purdue.edu/cms/sonic-client-cms-miniaod:latest"
           # - "--cache=true"
