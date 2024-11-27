@@ -96,5 +96,5 @@ git config --global user.name "FirstName LastName"
 git cms-init $ACCESS_CMSSW $BATCH
 git cms-merge-topic -u fastmachinelearning:cmsTritonUpdates2
 git clone ${ACCESS_GITHUB}fastmachinelearning/sonic-workflows -b CMSSW_14_1_X
-# cd ${CMSSW_BASE}/src
-# scram b -j ${CORES}
+cd ${CMSSW_BASE}/src
+scram b -j ${CORES}
