@@ -1,11 +1,20 @@
 ARG ROOT_CONTAINER=gitlab-registry.cern.ch/linuxsupport/alma8-base:latest
 FROM $ROOT_CONTAINER
 
-# Set SCRAM architecture
-ENV SCRAM_ARCH=el8_amd64_gcc12
 
 # Install dependencies
-RUN yum install -y wget bash perl git which python3 glibc-static glibc-devel
+RUN dnf -y install \
+    'dnf-command(config-manager)' \
+    sudo wget perl which git bzip2 \
+    openssh-server openssh-clients openssl-devel \
+    emacs vim-enhanced jq xterm-resize \
+    libXft libXpm libXext libSM mesa-libGL libnsl.x86_64 \
+    glibc-locale-source glibc-langpack-en \
+    stress apptainer compat-openssl10 \
+    s3cmd htop \
+    boost-devel diffutils ncurses-compat-libs cmake \
+    glibc-static
+
 WORKDIR /home/
 
 RUN source /cvmfs/cms.cern.ch/cmsset_default.sh && \
