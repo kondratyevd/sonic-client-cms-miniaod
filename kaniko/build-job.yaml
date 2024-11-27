@@ -25,11 +25,17 @@ spec:
         volumeMounts:
           - name: docker-config
             mountPath: /kaniko/.docker/
+          - name: cvmfs
+            mountPath: /cvmfs
+            mountPropagation: HostToContainer
       restartPolicy: Never
       volumes:
         - name: docker-config
           secret:
             secretName: docker-config
+        - name: cvmfs
+          hostPath: 
+            path: /cvmfs
       nodeSelector:
         cms-af-prod: 'true'
       tolerations:
