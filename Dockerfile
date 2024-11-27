@@ -7,8 +7,7 @@ WORKDIR /home/
 
 RUN source /cvmfs/cms.cern.ch/cmsset_default.sh && \
     wget https://raw.githubusercontent.com/fastmachinelearning/sonic-workflows/CMSSW_14_1_X/setup.sh \
-    && chmod +x setup.sh \
-    && ./setup.sh
+    && source setup.sh
 
 RUN cd CMSSW_14_1_0_pre7/src/sonic-workflows \
     && cmsenv
