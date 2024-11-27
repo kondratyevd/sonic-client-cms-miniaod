@@ -14,7 +14,9 @@ COPY setup.sh /home/
 RUN source /cvmfs/cms.cern.ch/cmsset_default.sh && \
     chmod +x setup.sh &&\
     ./setup.sh &&\
-    cd CMSSW_14_1_0_pre7/src/sonic-workflows \
+    ls -l &&\
+    ls -l /home/CMSSW_14_1_0_pre7/src/ &&\
+    cd /home/CMSSW_14_1_0_pre7/src/sonic-workflows \
     && cmsenv
 
 COPY entrypoint.sh /entrypoint.sh
