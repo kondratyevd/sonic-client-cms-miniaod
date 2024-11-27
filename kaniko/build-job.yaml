@@ -14,7 +14,7 @@ spec:
           - "--context-sub-path=docker/"
           - "--dockerfile=Dockerfile"
           - "--destination=geddes-registry.rcac.purdue.edu/cms/sonic-client-cms-miniaod:latest"
-          # - "--cache=true"
+          - "--cache=true"
           # - "--no-push"
         resources:
           requests:

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set -e
 
 cd /home/CMSSW_14_1_0_pre7/src/sonic-workflows
