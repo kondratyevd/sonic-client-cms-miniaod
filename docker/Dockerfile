@@ -19,9 +19,10 @@ RUN mkdir -p /data/
 COPY test_aodsim.root /data/
 COPY step2_PAT.py /home/CMSSW_14_1_0_pre7/src/sonic-workflows
 
-RUN mkdir -p /etc/SITECONF/local/JobConfig/
-COPY site-local-config.xml /etc/SITECONF/local/JobConfig/
+# RUN mkdir -p /etc/SITECONF/local/JobConfig/
+# COPY site-local-config.xml /etc/SITECONF/local/JobConfig/
 # later: export CMS_PATH=/etc/
+ENV CMS_PATH /cvmfs/cms-ib.cern.ch/
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
