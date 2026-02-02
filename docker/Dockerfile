@@ -1,7 +1,7 @@
 FROM opensciencegrid/osg-wn:latest
 
 RUN dnf -y install git bash perl which python3 epel-release dnf-plugins-core glibc-static bzip2 \
-    openssh-server openssh-clients openssl-devel
+    openssh-server openssh-clients openssl-devel procps-ng brotli
 
 WORKDIR /home/
 
