@@ -1,6 +1,6 @@
 FROM rockylinux:9
 
-RUN dnf -y install git wget glibc-static
+RUN dnf -y install git wget
 
 WORKDIR /home/
 
