@@ -1,11 +1,9 @@
-FROM opensciencegrid/osg-wn:latest
+FROM rockylinux:9
 
-RUN dnf -y install git bash perl which python3 epel-release dnf-plugins-core glibc-static bzip2 \
-    openssh-server openssh-clients openssl-devel procps-ng brotli wget
+RUN dnf -y install git wget glibc-static
 
 WORKDIR /home/
 
-# Setup steps from sonic-workflows README (CMSSW_16_0_X)
 RUN source /cvmfs/cms.cern.ch/cmsset_default.sh && \
     wget https://raw.githubusercontent.com/fastmachinelearning/sonic-workflows/CMSSW_16_0_X/setup.sh && \
     chmod +x setup.sh && \
