@@ -12,6 +12,8 @@ spec:
         args:
           - "--address=sonic-server.cms.geddes.rcac.purdue.edu"
           - "--port=8001"
+          - "--redir=root://cmsxrootd.fnal.gov/"
+          - "--verboseDiscovery"
         env:
           - name: X509_USER_PROXY
             value: /etc/grid-security-ro/x509up
