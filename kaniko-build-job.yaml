@@ -13,7 +13,7 @@ spec:
           - "--context=git://github.com/kondratyevd/sonic-client-cms-miniaod.git"
           - "--context-sub-path=docker/"
           - "--dockerfile=Dockerfile"
-          - "--destination=geddes-registry.rcac.purdue.edu/cms/sonic-client-cms-miniaod:latest"
+          - "--destination=geddes-registry.rcac.purdue.edu/cms/sonic-client-cms-miniaod:cmssw_16"
           - "--cache=true"
           # - "--no-push"
         resources:
