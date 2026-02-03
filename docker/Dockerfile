@@ -1,6 +1,6 @@
 FROM rockylinux:9
 
-RUN dnf -y install git wget which procps-ng brotli
+RUN dnf -y install git wget which procps-ng brotli glibc-headers
 
 WORKDIR /home/
 
