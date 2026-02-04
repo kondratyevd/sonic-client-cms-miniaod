@@ -3,6 +3,8 @@ kind: Job
 metadata:
   name: cmsrun-job
 spec:
+  parallelism: 10
+  completions: 10
   template:
     spec:
       containers:
@@ -26,11 +28,11 @@ spec:
             readOnly: true
         resources:
           requests:
-            memory: "32Gi"
-            cpu: "8"
+            memory: "16Gi"
+            cpu: "4"
           limits:
-            memory: "32Gi"
-            cpu: "8"
+            memory: "16Gi"
+            cpu: "4"
       restartPolicy: Never
       volumes:
         - name: cvmfs
