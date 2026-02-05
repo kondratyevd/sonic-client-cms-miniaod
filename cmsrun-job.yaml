@@ -9,7 +9,7 @@ spec:
     spec:
       containers:
       - name: cmsrun-job
-        image: geddes-registry.rcac.purdue.edu/cms/sonic-client-cms-miniaod:cmssw_16
+        image: kondratyevd/sonic-client-cms-miniaod:cmssw_16
         args:
           - "--address=sonic-server.cms.geddes.rcac.purdue.edu"
           - "--port=8001"
