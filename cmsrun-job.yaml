@@ -9,7 +9,7 @@ spec:
     spec:
       containers:
       - name: cmsrun-job
-        image: kondratyevd/sonic-client-cms-miniaod:cmssw_16
+        image: kondratyevd/sonic-client-cms-miniaod:cmssw_16_patch1
         args:
           - "--address=sonic-server.cms.geddes.rcac.purdue.edu"
           - "--port=8001"
@@ -39,7 +39,7 @@ spec:
             claimName: cvmfs
         - name: x509-proxy
           secret:
-            secretName: x509-proxy
+            secretName: af-x509-proxy
             defaultMode: 384
 
       # These selectors are used at Purdue Geddes cluster.
