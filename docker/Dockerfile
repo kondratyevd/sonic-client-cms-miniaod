@@ -8,7 +8,7 @@ RUN dnf -y install git wget which procps-ng brotli glibc-headers dnf-plugins-cor
 
 WORKDIR /home/
 
-COPY docker/filenames_patch.py /home/filenames_patch.py
+COPY filenames_patch.py /home/filenames_patch.py
 
 RUN source /cvmfs/cms.cern.ch/cmsset_default.sh && \
     wget https://raw.githubusercontent.com/fastmachinelearning/sonic-workflows/CMSSW_16_0_X/setup.sh && \
@@ -18,7 +18,7 @@ RUN source /cvmfs/cms.cern.ch/cmsset_default.sh && \
     cd /home/CMSSW_16_0_0_pre4/src && \
     cmsenv
 
-COPY docker/entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
