@@ -1,4 +1,4 @@
-FROM rockylinux:9
+FROM geddes-registry.rcac.purdue.edu/docker-hub-cache/library/rockylinux:9
 
 RUN dnf -y install git wget which procps-ng brotli glibc-headers dnf-plugins-core \
     && dnf config-manager --set-enabled crb \
