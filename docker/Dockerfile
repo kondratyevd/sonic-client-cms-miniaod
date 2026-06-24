@@ -1,6 +1,6 @@
 FROM geddes-registry.rcac.purdue.edu/docker-hub-cache/library/rockylinux:9
 
-RUN dnf -y install git wget which procps-ng brotli glibc-headers glibc-devel dnf-plugins-core \
+RUN dnf -y install git wget which procps-ng brotli glibc-headers glibc-devel openssl-devel dnf-plugins-core \
     && dnf config-manager --set-enabled crb \
     && dnf -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm \
     && dnf -y install https://repo.osg-htc.org/osg/25-main/osg-25-main-el9-release-latest.rpm \
