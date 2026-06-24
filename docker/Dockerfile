@@ -11,11 +11,11 @@ WORKDIR /home/
 COPY filenames_patch.py /home/filenames_patch.py
 
 RUN source /cvmfs/cms.cern.ch/cmsset_default.sh && \
-    wget https://raw.githubusercontent.com/fastmachinelearning/sonic-workflows/CMSSW_16_0_X/setup.sh && \
+    wget https://raw.githubusercontent.com/fastmachinelearning/sonic-workflows/CMSSW_17_0_X/setup.sh && \
     chmod +x setup.sh && \
     ./setup.sh -a https && \
     python3 /home/filenames_patch.py && \
-    cd /home/CMSSW_16_0_0_pre4/src && \
+    cd /home/CMSSW_17_0_0_pre1/src && \
     cmsenv
 
 COPY entrypoint.sh /entrypoint.sh

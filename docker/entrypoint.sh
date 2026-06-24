@@ -2,7 +2,7 @@
 
 set -e
 
-cd /home/CMSSW_16_0_0_pre4/src/sonic-workflows
+cd /home/CMSSW_17_0_0_pre1/src/sonic-workflows
 
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 eval `scramv1 runtime -sh`
